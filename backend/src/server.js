@@ -12,6 +12,8 @@ const app = express();
 const __dirname = path.resolve();
 const PORT = process.env.PORT || 3000;
 
+app.use(express.json()); // to parse json data in request body (req.body)
+
 app.use("/api/auth",Authroutes);
 
 // make deployment ready
